@@ -1,0 +1,24 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: .docker/Dockerfile
+        ports:
+            - 8080:80
+            - 8443:443
+            - 9003:9003
+            - 9000:9000
+        environment:
+            CADDY_DEBUG: "debug"
+            FRANKENPHP_CONFIG: "worker /srv/www/worker.php"
+            SERVER_NAME: "http://localhost:80"
+            # Xdebug
+            XDEBUG_SESSION: 1
+            XDEBUG_CONFIG: "idekey=docker"
+            XDEBUG_MODE: "debug"
+            PHP_IDE_CONFIG: "serverName=docker"
+            # Nette
+            NETTE_DEBUG: "true"
+        volumes:
+            - ./:/srv
+            - .docker/Caddyfile:/etc/caddy/Caddyfile

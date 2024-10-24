@@ -1,0 +1,3 @@
+#!/bin/sh
+
+NETTE_DEBUG=1 php -S localhost:8000 -t www www/worker.php

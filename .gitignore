@@ -1,0 +1,12 @@
+# IDE
+/.idea
+
+# Composer
+/vendor
+
+# Apache
+!.htaccess
+
+# Nette
+/config/local.neon
+/var

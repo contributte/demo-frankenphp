@@ -1,0 +1,26 @@
+{
+	{$CADDY_GLOBAL_OPTIONS}
+
+	frankenphp {
+		# worker /srv/www/worker.php
+		{$FRANKENPHP_CONFIG}
+	}
+	order php_server before file_server
+}
+
+{$CADDY_EXTRA_CONFIG}
+
+{$SERVER_NAME:localhost} {
+	root * /srv/www/
+
+	{$CADDY_SERVER_EXTRA_DIRECTIVES}
+
+	@indexFiles file {
+		try_files {path} worker.php
+		split_path .php
+	}
+	rewrite @indexFiles {http.matchers.file.relative}
+
+	encode zstd gzip
+	php_server
+}

@@ -1,0 +1,19 @@
+name: "PHP"
+
+on:
+  pull_request:
+
+  push:
+    branches: [ "*" ]
+
+  schedule:
+    - cron: "0 8 * * 1"
+
+jobs:
+  php:
+    name: "PHP check"
+    uses: contributte/.github/.github/workflows/php.yml@v1
+    with:
+      name: "PHP check"
+      php: "8.2"
+      run: "composer validate"

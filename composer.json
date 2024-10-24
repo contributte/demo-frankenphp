@@ -12,7 +12,7 @@
     "contributte/nella": "^0.3.0"
   },
   "require-dev": {
-    "contributte/dev": "^0.4",
+    "contributte/dev": "^0.5",
     "symfony/thanks": "^1.4.0"
   },
   "autoload": {

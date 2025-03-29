@@ -9,6 +9,7 @@ class HomePresenter extends BasePresenter
 
 	public function actionDefault()
 	{
+		error_log("Hello from error", 4);
 	}
 
 }

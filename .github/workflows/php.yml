@@ -15,5 +15,5 @@ jobs:
     uses: contributte/.github/.github/workflows/php.yml@v1
     with:
       name: "PHP check"
-      php: "8.2"
+      php: "8.4"
       run: "composer validate"

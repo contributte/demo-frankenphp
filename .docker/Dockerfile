@@ -1,4 +1,4 @@
-FROM dunglas/frankenphp:1.2.5-php8.3-bookworm
+FROM dunglas/frankenphp:1.2.5-php8.4-bookworm
 
 RUN echo "variables_order = \"EGPCS\"" >> $PHP_INI_DIR/conf.d/990-php.ini
 

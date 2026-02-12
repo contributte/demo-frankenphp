@@ -8,12 +8,12 @@
   "license": "MIT",
   "type": "project",
   "require": {
-    "php": ">=8.2",
+    "php": "^8.4",
     "contributte/nella": "^0.3.0"
   },
   "require-dev": {
-    "contributte/dev": "^0.4",
-    "symfony/thanks": "^1.4.0"
+    "contributte/dev": "^0.6",
+    "symfony/thanks": "^1.4.1"
   },
   "autoload": {
     "psr-4": {

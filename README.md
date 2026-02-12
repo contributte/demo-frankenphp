@@ -32,7 +32,7 @@ Demo of [FrankenPHP](https://github.com/dunglas/frankenphp) with [Nette Framewor
 
 ## Installation
 
-You will need `PHP 8.2+` and [Composer](https://getcomposer.org/).
+You will need `PHP 8.4+` and [Composer](https://getcomposer.org/).
 
 Create project using composer.
 
